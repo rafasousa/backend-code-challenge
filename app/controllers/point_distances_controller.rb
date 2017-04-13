@@ -1,0 +1,2 @@
+class PointDistancesController < ApplicationController
+end
