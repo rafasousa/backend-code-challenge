@@ -1,5 +1,5 @@
 class PointsController < ApplicationController
-    before_action :set_point, only: [:show, :update, :destroy]
+  before_action :set_point, only: [:show, :update, :destroy]
 
   # GET /points
   def index
@@ -34,7 +34,7 @@ class PointsController < ApplicationController
 
   def point_params
     # whitelist params
-    params.permit(:name)
+    params.permit(:id, :name)
   end
 
   def set_point
