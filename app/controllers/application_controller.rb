@@ -1,4 +1,4 @@
 class ApplicationController < ActionController::API
-  include Response
+  include ResponseHandler
   include ExceptionHandler
 end

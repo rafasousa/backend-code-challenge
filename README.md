@@ -62,3 +62,22 @@ That's it. There aren't any hidden gotchas or trick questions. That's really wha
 ## License
 
 We have licensed this project under the MIT license so that you may use this for a portfolio piece (or anything else!).
+
+## How to install
+
+```
+bundle install
+bundle exec rake db:drop db:create db:migrate
+```
+
+## How to run
+
+```
+rails s
+```
+
+## How to run tests
+
+```
+bundle exec rspec
+```

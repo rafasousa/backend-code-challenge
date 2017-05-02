@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  resources :points do
-  end
-
-  resources :point_distances do
-  end
-
-  resources :cost do
-  end
+    resources :points
+    resource :point_distances, only: [:show, :create]    
+    resource :cost, only: [:show]
 end

@@ -1,6 +1,5 @@
 class PointsController < ApplicationController
-  before_action :set_point, only: [:show, :update, :destroy]
-
+  
   # GET /points
   def index
     @points = Point.all
@@ -15,17 +14,20 @@ class PointsController < ApplicationController
 
   # GET /points/:id
   def show
+    set_point()
     json_response(@point)
   end
 
   # PUT /points/:id
   def update
+    set_point()
     @point.update(point_params)
     head :no_content
   end
 
   # DELETE /points/:id
   def destroy
+    set_point()
     @point.destroy
     head :no_content
   end

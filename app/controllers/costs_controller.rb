@@ -1,10 +1,11 @@
-class CostController < ApplicationController
+class CostsController < ApplicationController
      
-    # GET /costs
-    def index
+    def show
 
         begin
-            @cost = Point.calculate_cost(cost_params[:origin], cost_params[:destination], cost_params[:weight]);
+            cost_service = CostService.new(cost_params[:origin], cost_params[:destination], cost_params[:weight])
+
+            @cost = cost_service.calculate();
         
             json_response(@cost)
 
