@@ -6,32 +6,29 @@ class CostService
   validates :weight, inclusion: { in: 1..50 }
 
   def initialize(origin, destination, weight)
+  
+    @distances = []   
     @weight = weight.to_i
-    @origin_id = origin.to_i
     @destination_id = destination.to_i
-    @distances = []    
+    
     get_distances(origin.to_i)
+    
   end
     
   def calculate()
 
-      results = find_distances_recurseve()
+      results = find_distances_recursive()
       
       if results.present?
-
-          total_distance = results.get_sum_distance
-          
-          cost_value = total_distance * weight * 0.15
-
-          return  { cost: cost_value }
+          return results.total_distance * weight * 0.15
       else
-          raise ArgumentError.new('Ops, Nenhum ponto de entrega encontrado =(')
+          return nil
       end
   end
 
-  def find_distances_recurseve
+  def find_distances_recursive
     
-    distance = @distances.sort_by(&:get_sum_distance).first
+    distance = @distances.sort_by(&:total_distance).first
     
     return if distance.blank?
 
@@ -43,7 +40,7 @@ class CostService
     
     @distances.delete(distance)
 
-    find_distances_recurseve
+    find_distances_recursive
   end
 
   private

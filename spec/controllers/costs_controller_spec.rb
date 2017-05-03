@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe CostsController, type: :controller do
-
+RSpec.describe 'Costs API', type: :request do
+  
 end

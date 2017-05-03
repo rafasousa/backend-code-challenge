@@ -3,12 +3,19 @@ class Route
 
   def initialize(distance = nil, path = nil)
     @distances = []
-    @distances << path.distances if path.present?
-    @distances << distance if distance.present?
+
+    if path.present?
+      @distances << path.distances 
+    end
+
+    if distance.present?
+      @distances << distance
+    end
+
     @distances.flatten!
   end
 
-  def get_sum_distance
+  def total_distance
     sum_distance = 0
     distances.each { |r| sum_distance += r.distance }
     return sum_distance
