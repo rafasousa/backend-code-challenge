@@ -1,11 +1,11 @@
 class Route
   attr_reader :distances
 
-  def initialize(distance = nil, path = nil)
+  def initialize(distance = nil, route = nil)
     @distances = []
 
-    if path.present?
-      @distances << path.distances 
+    if route.present?
+      @distances << route.distances 
     end
 
     if distance.present?
