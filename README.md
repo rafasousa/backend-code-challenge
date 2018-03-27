@@ -1,4 +1,4 @@
-Ruby Engineer Coding Challenge
+Ruby/Elixir Engineer Coding Challenge
 =======================
 
 Hello!
@@ -38,8 +38,8 @@ Explanation: the shortest path from A to C is A -> B -> C = 25km. `cost = 25 * 5
 
 * The input format of distance should have the format `A B X`, where *0 < X <= 100000*. Wrong format or data should return an error;
 * If a distance point already exists, should be replaced with the new value;
-* The cost API should validate the given points and weight, where *0 < wheight <= 50*. If no path was found between *origin*  and *destination*, and error should be returned;
-* The solution should be implemented in Ruby. You could use the frameworks that you're most used to.
+* The cost API should validate the given points and weight, where *0 < wheight <= 50*. If no path was found between *origin*  and *destination*, an error should be returned;
+* The solution should be implemented in Ruby or Elixir. You could use the frameworks that you're most used to.
 * Both APIs will receive a large amount of requests: choose the design and technology wisely;
 
 ## Submission
@@ -51,7 +51,7 @@ You can follow the GitHub Fork/Pull Request workflow by [forking this repository
 We are looking for several things with this challenge. First, of course, we're looking for your answer to be technically correct. Beyond that, we're also looking for:
 
 * Is your code easy to read and understand?
-* Are you following the usual conventions for Ruby development?
+* Are you following the usual conventions for Ruby/Elixir development?
 * How good are you at writing tests? And how easy are they to read and understand?
 * Did you follow these directions?
 
