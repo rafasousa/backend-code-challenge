@@ -1,10 +1,9 @@
 # ShippingCost
 
-An application to calculate the shortest (using Dijkstra algorithm) to delivery packages.  
-I decided to use a gem insteat of make my own to gain some time.  
+An application to calculate the shortest path (using Dijkstra algorithm) to delivery packages.  
+I decided to use a gem with the algorithm insteat of code my own to gain some time.  
 I decided to use the Dijkstra algorithm because is simple and have a good performance, but the algorithm cannot be much precise if the values of the distance are negative.  
-I've created an strucutre inside the application to be easy to create new versions of the API.
-
+I've created an strucutre inside the application to be easy to create new versions.
 "app\controllers\api\v1\"
 
 
