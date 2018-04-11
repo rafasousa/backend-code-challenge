@@ -1,24 +1,41 @@
-# README
+# ShippingCost
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An application to calculate the shortest (using Dijkstra algorithm) to delivery packages.  
+I decided to use a gem insteat of make my own to gain some time.  
+I decided to use the Dijkstra algorithm because is simple and have a good performance, but the algorithm cannot be much precise if the values of the distance are negative.  
+I've created an strucutre inside the application to be easy to create new versions of the API.
 
-Things you may want to cover:
+"app\controllers\api\v1\"
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+## Dijkstra Alogrithm
+![Dijkstra](https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif)
 
-* Database creation
+## Dependencies
+* Djikstra Gem 0.0.2 - https://github.com/thinkphp/dijkstra.gem
+* MySQL
+* Ruby 2.2.5  
+* Rails 5.1.6
 
-* Database initialization
+## Runing
+```shell
+rails db:create
+rails db:migrate
+bundle install
+rails s
+```
 
-* How to run the test suite
+## Tests
+```shell
+bundle exec rspec
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Resources
 
-* Deployment instructions
+POST /distance
 
-* ...
+```json
+{"source" : "B", "destination" : "C", "distance" : 10}
+```
+GET /cost?origin=A&destination=C&weight=5
