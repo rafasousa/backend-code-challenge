@@ -1,4 +1,5 @@
 class Cost
+  # TAX HERE
   TAX = 0.15
   def calculate_route(params)
     r = Path.all
